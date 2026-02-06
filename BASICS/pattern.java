@@ -1,27 +1,39 @@
+import java.util.Scanner;
+public class pattern{
 
-public  class pattern{
      public static void main(String[] args) {
-        int  n = 9;
 
-       for(int row = 1 ; row <= n ; row++){
-            for(int col = 1 ; col <=row ; col++ ){
-                System.out.print(col +" ");
-            }
-            for(int sp = 1; sp<=n-row ;sp++){
-                System.out.print("  ");
-            }
+          Scanner sc = new Scanner(System.in);
 
-          for(int sp2 = 1; sp2<=n-row ; sp2++){
-                System.out.print("  ");
-            }
-            int start = row;
-            for(int col = start ; col>=1 ; col--){
-                  System.out.print(col + " ");
+          int row , col;
+          System.out.println("Enter the row & col: ");
+          row = sc.nextInt();
+          col = sc.nextInt();
 
-            }
+          //  for the upper triangle
+           for(int i = 1 ; i <= row ; i++){
 
-            System.out.println();
-       }
+                for(int  j = col ; j > i ; j--){
+                      System.out.print(" ");
+                }
+                for(int k = 1 ;  k <= i ; k++){
+                    System.out.print("* ");
+                }
 
+                System.out.println();
+
+           }
+
+           //for the lower triangle
+           for(int i= 2 ; i <= row ; i++){
+
+                for(int j = 1 ; j < i ; j++){
+                     System.out.print(" ");
+                }
+                for(int k = col ; k >= i ; k--){
+                    System.out.print("* ");
+                }
+                System.out.println();
+           }
      }
 }

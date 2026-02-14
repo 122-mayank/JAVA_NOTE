@@ -8,7 +8,7 @@ public class PreparedStatementEx {
 
         String url ="jdbc:mysql://localhost:3306/college";
         String username ="root";
-        String password ="";
+        String password ="@12madhav";
 
        Scanner sc = new Scanner(System.in);
        System.out.println("Enter the roll no: ");

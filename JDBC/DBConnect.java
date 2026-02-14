@@ -1,6 +1,8 @@
 
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class DBConnect{
@@ -10,7 +12,7 @@ public class DBConnect{
 
         String url = "jdbc:mysql://localhost:3306/college";
         String username ="root";
-        String password ="";
+        String password ="@12madhav";
 
         System.out.println("Enter the rollid ,name , age: ");
         int r = sc.nextInt();
